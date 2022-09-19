@@ -1,0 +1,35 @@
+num = int(input("how many elements you want to add:"))
+input_elements = input("Enter elements seperated by space")
+list = input_elements.split()
+
+choice = input('''
+which type of comprehension you want to create?
+A.For list comprehension
+B.For Dictionary comprehension
+C.For set comprehension
+D.For Generator comprehension
+
+--->
+''')
+
+if choice =='A':
+    list1 = [a for a in list]
+    print(list1)
+
+elif choice == 'B':
+    dict1 = {a:f"Item{a}"for a in list}
+    print(dict1)
+    print(type(dict1))
+
+elif choice == 'C':
+    set1 = {a for a in list}
+    print(set1)
+    print(type(set1))
+
+elif choice == 'D':
+    Genertor1 = (a for a in list)
+    print(Genertor1)
+    print(type(Genertor1))
+
+else:
+    print("Invalid Input")
